@@ -1,0 +1,145 @@
+body,html{
+		height:100%;
+		padding:0;
+    overflow: hidden;
+}
+
+body{
+	background: url(../img/body_bj.jpg);
+    font-family: Microsoft Yahei;
+}
+/*body-show*/
+.body-show{
+		width: 100%;
+    height: 100%;
+    background-size: cover;
+    position: relative;
+    background:url(../img/123.png)
+    ;
+
+}
+.z-bd-1 h3{
+	height:10px;
+margin: 18px;
+}
+
+/*header*/
+#header{
+	  background: none;
+    height: 44px;
+    padding: 40px 0 40px 50px;
+}
+/*center*/
+#center{
+	    position: absolute;
+    top: 51%;
+    right: 0;
+    left: 0;
+    width: 475px;
+    height: 484px;
+    margin: auto auto;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+/*centerT*/
+.centerT{
+	width: 380px;
+  margin: 0 auto;
+  
+}
+.centerT img{
+	    width: 248px;
+    height: 65px;
+    margin-left: 66px;
+}
+
+.centerT1{
+	width:100%;
+	height:392px;
+	background:url(../img/icloud-bar.png) no-repeat 0 bottom;
+}
+
+.centerT1-1{
+       width: 442px;
+    height: 337px;
+    background: rgba(255,255,255,.85);
+    position: absolute;
+    bottom: 67px;
+    left: 16px;
+}
+.center2{
+width:302px;
+height:53px;
+margin: 0 auto;
+background:#fff;
+border-bottom: 1px solid #ccc;
+}
+.center2 input{
+    width: 87%;
+    height: 100%;
+    border: 0;
+    /*margin-left: 41px;*/
+}
+.centerT1-1 .center2:first-child{
+margin-top: 40px;
+}
+.centerT1-1 .center2{
+position:relative;
+}
+.Yanz{
+    position: absolute;
+    right: 8px;
+    width: 104px;
+    height: 36px;
+    bottom: 8px;
+    color:red;
+ background: url(../img/ecshop-bg.png); 
+    /*display:inline-block;*/
+}
+.location{
+    width: 302px;
+    height: 51px;
+    margin: 0 auto;
+    margin-top: 14px;
+}
+.location .btn{
+    width:100%;
+    height:100%;
+    border:0;
+    background: #fc7878;
+    border-radius: 5px;
+    font-size:16px;
+    color:#fff;
+}
+.bottom{
+    width:302px;
+    height:17px;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+#remember{
+    float: left;
+    width: 15px;
+    height: 15px;
+    margin: 2px 8px 0 0;
+}
+.bottom label{
+    color: #666;
+    float: left;
+    font-size: 12px;
+}
+.bottom a{
+   display: block;
+    font-size: 12px;
+    color: #41A5E1 !important;
+    line-height: 18px;
+    float: left;
+    margin-left: 34px;
+}
+.iconfont{
+	    margin-right: 9px;
+    margin-left: 9px;
+}

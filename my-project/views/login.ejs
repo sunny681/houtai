@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>登录页面</title>
+	<link rel="stylesheet" type="text/css" href="../stylesheets/common.css">
+<link rel="stylesheet" type="text/css" href="../stylesheets/style.css">
+<link rel="stylesheet" type="text/css" href="../font/iconfont.css">
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+</head>
+<body>
+
+	<!-- header -->
+	<form action="login" method="post" class="body-show">
+	
+		<div id="header">
+		<img src="img/shopex.png">
+	</div>
+	
+
+	<!-- <!center  -->
+ <div id="center">
+		<!-- centerT -->
+		<div class="centerT">
+			<img src="img/ecshop-logo.png">
+		</div>
+
+		<div class="centerT1">
+		<div class="centerT1-1">
+			<div class="center2">
+				<i class="iconfont icon-yonghutouxiang"></i>
+			<input type="text" name="username" placeholder="用户名" class="txt">
+				
+			</div>
+
+		<div class="center2">
+				<i class="iconfont icon-mima"></i>
+			<input type="password" name="username" placeholder="密码" class="pwd">
+				
+			</div>
+
+			<div class="center2" id="center2">
+				<i class="iconfont icon-2yanzhengma"></i>
+			<input type="text" name="username" placeholder="验证码" class="yzm">
+				<div class="Yanz">
+					<!-- 789 -->
+				</div>
+				<!-- <span class="s2">画荻和丸i</span> -->
+			</div>
+<!-- 登录 -->
+			<div class="location">
+				<input type="submit" name="" value="登录" class="btn">
+			</div>
+			<!-- 底部 -->
+	<div class="bottom">
+		<input type="checkbox" value="1" name="remember" id="remember">
+	<label for="remember">保存登录信息</label>
+	<a href="#">忘记密码?</a>
+	<a href="#">去店铺首页>></a>
+
+
+	</div>
+
+
+		</div>
+	</div>
+		
+
+
+
+
+	</div>
+	</form> 
+	
+
+</body>
+<script type="text/javascript">
+	function login() {
+		$.ajax({
+			url: "/api/login",
+			type: "post",
+			data: {
+				username: $("#username").val(),
+				psw: $("#psw").val()
+				
+			},
+			success: function(res) {
+				console.log(res);
+				if( res.status == 1 ){
+					location.href = "https://www.baidu.com";
+				}else{
+					alert("登录失败")
+				}
+			}
+		})
+	}
+</script>
+</html>
