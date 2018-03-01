@@ -5,7 +5,8 @@ body,html{
 }
 
 body{
-	background: url(../img/body_bj.jpg);
+	background: url(../img/123.png);
+    background-size: cover;
     font-family: Microsoft Yahei;
 }
 /*body-show*/
@@ -113,6 +114,7 @@ position:relative;
     border-radius: 5px;
     font-size:16px;
     color:#fff;
+    cursor: pointer;
 }
 .bottom{
     width:302px;

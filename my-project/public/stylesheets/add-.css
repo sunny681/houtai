@@ -1,0 +1,160 @@
+body,html{
+	width:100%;
+	padding: 10px;
+	
+}
+h1{
+	  border-bottom: 1px solid #ccc;
+    color: #333;
+    font-weight: normal;
+    padding: 7px 10px;
+    margin: 0 0 10px 0;
+    overflow: hidden;
+    position: absolute;
+    top: 9px;
+    width: 100%;
+		height: 30px;
+}
+h1 span{
+	color: #4c4c4c;
+    font-size: 18px;
+    font-weight: normal;
+    float: left;
+}
+h1 a{
+	color: #333;
+	cursor:pointer;
+}
+h1 span:nth-child(3){
+	margin-left: 12px;
+}
+h1 span:last-child{
+	float:right;
+}
+h1 span:last-child a{
+		float: right;
+    height: 26px;
+    line-height: 26px;
+    padding: 0 10px 0 23px;
+    background: #c43926 url(../img/icon_add02.gif) no-repeat 6px center;
+    border-radius: 3px;
+    color: #fff;
+    font-size: 13px;
+    font-weight: normal;
+    text-align: center;
+    cursor: pointer;
+}
+/*show*/
+.show{
+	width:100%;
+	margin-top: 44px;
+}
+.show-T{
+	width:100%;
+	height:39px;
+	background:#efefef;
+}
+.show-T li{
+	float:left;
+	padding: 0 20px;
+}
+.show-T li a{
+	display: block;
+	width:88px;
+	height:39px;
+	text-align: center;
+	line-height:39px;
+	cursor: pointer;
+	font-size:12px;
+	color:#787878;
+}
+.show-T li:first-child a{
+	background:#fefefe;
+}
+/*from*/
+.from{
+	  padding: 10px;
+    background: #fefefe;
+}
+
+.label {
+    text-align: right;
+    vertical-align: top;
+    font-weight: bold;
+    padding: 5px 1em;
+    width: 30%;
+    font-size:12px;
+    line-height: 30px;
+}
+.goods_name{
+	margin: 5px 0;
+	width:30%;
+
+}
+.a1 img{
+float: right;
+}
+.notice-span{
+	color:#666;
+	font-size: 12px;
+}
+option{
+	    font-weight: normal;
+    display: block;
+    white-space: pre;
+    min-height: 1.2em;
+    padding: 0px 2px 1px;
+}
+.special{
+	  margin: 0 5px;
+    padding: 1px 5px;
+    border: 1px solid #91C4D0;
+    border-right: 2px solid #278296;
+    border-bottom: 2px solid #278296;
+    background: #DDEEF2;
+    text-decoration: none;
+    font-weight: 400;
+    font-size:12px;
+    color:#666;;
+}
+.btn{
+		padding: 5px 15px 5px;
+    margin: 2px 2px;
+    border: none;
+    background: #ff3f3f;
+    color: #FFF;
+    cursor: pointer;
+    border-radius: 3px;
+}
+td{
+	font-size:12px;
+}
+td .I1{
+    margin: 5px 0;
+    width:63px;
+}
+.a1{
+	color:#666;
+}
+.button-div {
+    text-align: center;
+    padding: 3px 0;
+}
+input.button {
+    padding: 5px 15px 5px;
+    margin: 2px 2px;
+    border: none;
+    background: #ff3f3f;
+    color: #FFF;
+    cursor: pointer;
+    border-radius: 3px;
+  }
+
+#footer {
+		font-size:12px;
+    border: 1px solid #ddd;
+    padding: 15px;
+    color: #9CACAF;
+    margin: 10px 0;
+    text-align: center;
+}

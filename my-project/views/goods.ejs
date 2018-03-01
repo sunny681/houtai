@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="../js/goods.js"></script>
+	<link rel="stylesheet" type="text/css" href="../stylesheets/goods.css">
+	<link rel="stylesheet" type="text/css" href="../stylesheets/common.css">
+</head>
+<body>
+	<h1>
+		<span>
+			<a href="#">
+				ECSHOP 管理中心
+			</a>
+		</span>
+		<span> - 添加新商品 </span>
+		<span>
+			<a href="#">
+				<img src="../img/jnsy.png">
+			</a>
+		</span>	
+		<span>
+			<a href="#">商品列表</a>
+		</span>
+
+	</h1>
+	<!-- 产品展示 -->
+	<div class="goods-show">
+		<!-- <form action="frmg" action="/api/goods" method="post" enctype="multipart/form-data"> -->
+			<img src="../img/icon_search.gif" width="26" height="22" border="0" alt="SEARCH">
+			<!-- 分类 -->
+			<select class="cat_id">
+				<option value="0">所有分类</option>
+				<option value="132">钻石</option>
+				<option value="190">&nbsp;&nbsp;&nbsp;&nbsp;衬衫</option>
+				<option value="193">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;短袖衬衫</option>
+				<option value="194">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;长袖衬衫</option>
+				<option value="170">&nbsp;&nbsp;&nbsp;&nbsp;裤子</option>
+				<option value="623">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;休闲短裤</option>
+				<option value="173">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;休闲裤</option>
+			</select>
+			<!-- 品牌 -->
+			<select class="brand_id">
+				<option value="0">所有品牌</option>
+				<option value="45">gr</option>
+				<option value="33">空间大师</option>
+				<option value="32">溢彩年华</option>
+				<option value="31">EVENY</option>
+				<option value="30">圣迪奥</option>
+			</select>
+			<!-- 推荐 -->
+			<select name="intro_type">
+				<option value="0">全部</option>
+				<option value="is_best">精品</option>
+				<option value="is_new">新品</option>
+				<option value="is_hot">热销</option>
+				<option value="is_promote">特价</option>
+				<option value="all_type">全部推荐</option>
+			</select>
+			<!-- 上架 -->
+			<select name="is_on_sale">
+				<option value="">全部</option>
+				<option value="1">上架</option>
+				<option value="0">下架</option>
+			</select>
+			关键字 
+			<input type="text" name="keyword" size="15" class="txt">
+			<input type="submit" value=" 搜索 " class="button">
+		<!-- </form> -->
+	</div>
+	<!-- lieb -->
+
+	<!-- <form action="" name=""> -->
+		<div class="lieb">
+
+			<table cellpadding="3" cellspacing="1" class="tb">
+				<tbody>
+					<tr>
+						<th>
+							<input type="checkbox" class="selectAll">
+							<a href="#" title="点击对列表排序">编号</a>
+							<!-- <img src="../img/sort_desc.gif"> -->
+						</th>
+						<th>
+							<a href="#">商品名称</a>
+						</th>
+						<th>
+							<a href="#" title="点击对列表排序">货号</a>
+						</th>
+						<th>
+							<a href="#" title="点击对列表排序">价格</a>
+						</th>
+						<th>
+							<a href="#" title="点击对列表排序">上架</a>
+						</th>
+						<th>
+							<a href="#">精品</a>
+						</th>
+						<th><a href="#">新品</a></th>
+						<th><a href="#">热销</a></th>
+						<th><a href="#">推荐排序</a></th>
+						<th><a href="#">库存</a></th>
+						<th><a href="#">虚拟销量</a></th>
+						<th>操作</th>
+					</tr>
+					<% for(var i=0;i<list.length;i++) { %>
+
+					<tr class="b1">
+						<td style="background-color: rgb(255, 255, 255);">
+							<input type="checkbox" name="checkboxes[]" value="264" class="ck">
+							264
+						</td>
+						<td class="first-cell" style="background-color: rgb(255, 255, 255);">
+							<!-- <span title="点击修改内容" style="">找思路</span> -->
+							<span title="点击修改内容" style=""><%=list[i].goods_name %></span>
+
+						</td>
+						<td align="center" style="background-color: rgb(255, 255, 255);">
+							<span title="点击修改内容" style="">
+								<!-- E1233 -->
+								<%=list[i].huohao %>
+							</span>
+						</td>
+						<td align="center" style="background-color: rgb(255, 255, 255);">
+							<span title="点击修改内容" style="">
+								<!-- 	233.00 -->
+								<%=list[i].market_price %> 
+							</span>
+						</td>
+						<td align="center" style="background-color: rgb(255, 255, 255);">
+							<img src="../img/yes.gif" onclick="listTable.toggle(this, 'toggle_on_sale', 264)">
+						</td>
+						<td align="center" style="background-color: rgb(255, 255, 255);">
+							<img src="../img/yes.gif">
+						</td>
+						<td align="center" style="background-color: rgb(255, 255, 255);">
+							<img src="../img/yes.gif" onclick="listTable.toggle(this, 'toggle_new', 264)">
+						</td>
+						<td align="center" style="background-color: rgb(255, 255, 255);">
+							<img src="../img/no.gif">
+						</td>
+						<td align="center" style="background-color: rgb(255, 255, 255);">
+							<span>100</span>
+						</td>
+						<td align="center" style="background-color: rgb(255, 255, 255);">
+							<span>1</span>
+						</td>
+						<td align="center" style="background-color: rgb(255, 255, 255);">
+							<span>2344</span>
+						</td>
+						<td align="center" style="background-color: rgb(255, 255, 255);">
+							<a href="#" target="_blank" title="查看">
+								<img src="../img/icon_view.gif" width="21" height="21" border="0">
+							</a>
+							<a href="#" title="编辑">
+								<img src="../img/icon_edit.gif" width="21" height="21" border="0">
+							</a>
+							<a href="#" title="复制">
+								<img src="../img/icon_copy.gif" width="21" height="21" border="0">
+							</a>
+							<a href="javascript:;" title="回收站" class="del">
+								<img src="../img/icon_trash.gif" width="21" height="21" border="0"></a>
+								
+							</td>
+						</tr>
+						<% } %>
+						
+
+					</tbody>
+				</table>
+				<!-- 分页 -->
+				<table id="page-table" cellspacing="0">
+					<tbody>
+						<tr>
+							<td align="right" nowrap="true" style="background-color: rgb(255, 255, 255);">
+								<!-- $Id: page.htm 14216 2008-03-10 02:27:21Z testyang $ -->
+								<div id="turn-page">总计 
+									<span id="totalRecords">36</span>
+									个记录分为 
+									<span id="totalPages">3</span>
+									页当前第 
+									<span id="pageCurrent">1</span>
+									页，每页 
+									<input type="text" size="3" id="pageSize" value="15">
+									<span id="page-link">
+										<a href="javascript:;">第一页</a>
+										<a href="javascript:;">上一页</a>
+										<a href="javascript:;">下一页</a>
+										<a href="javascript:;">最末页</a>
+										<select id="gotoPage">
+											<option value="1">1</option>
+											<option value="2">2</option>
+											<option value="3">3</option>         
+										</select>
+									</span>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div>
+				<select name="type" id="selAction" onchange="changeAction()">
+					<option value="">请选择...</option>
+					<option value="trash">回收站</option>
+					<option value="on_sale">上架</option>
+					<option value="not_on_sale">下架</option>
+					<option value="best">精品</option>
+					<option value="not_best">取消精品</option>
+					<option value="new">新品</option>
+					<option value="not_new">取消新品</option>
+					<option value="hot">热销</option>
+					<option value="not_hot">取消热销</option>
+					<option value="move_to">转移到分类</option>
+					
+				</select>
+				<input type="submit" value=" 确定 " id="btnSubmit" name="btnSubmit" class="button" disabled="true">
+			</div>
+		<!-- </form> -->
+
+		
+		
+
+
+		<!-- footer -->
+		<div id="footer">
+			共执行 9 个查询，用时 0.024480 秒，Gzip 已禁用，内存占用 3.581 MB<br>
+			版权所有 © 2005-2018 上海商派软件有限公司，并保留所有权利。
+		</div>
+
+	</body>
+	</html>

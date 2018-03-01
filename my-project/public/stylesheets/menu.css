@@ -1,0 +1,103 @@
+.top-one{
+      padding-left: 10px;
+    height: 34px;
+    padding-top: 0px;
+    background: #303030;
+}
+.top-one p{
+    margin: 1px 0 0 0;
+}
+.top-one p span{
+      line-height: 33px;
+    font-weight: bold;
+    padding: 4px 15px 4px 18px;
+    cursor: hand;
+    cursor: pointer;
+    font-size: 14px;
+    color: #fff;
+}
+/*show*/
+.show li{
+      cursor: pointer;
+        display: block;
+    border-top: #7f7f7f 1px solid;
+    width: 100%;
+    color: #FFF;
+    line-height: 42px;
+    text-align: left;
+    text-indent: 40px;
+    font-size: 12px;
+
+}
+.menu-item{
+      cursor: pointer;
+      font-size: 12px;
+    height: 30px;
+    line-height: 30px;
+    display: block;
+    font-weight: normal;
+    background: none;
+}
+.menu-item a{
+        font-size: 12px;
+    height: 30px;
+    line-height: 30px;
+    display: block;
+    color: #d7d7d7;
+}
+.menu-item a:hover{
+        background-color: #797979;
+    text-decoration: none;
+    color: #fff;
+}
+.show-div li:hover{
+    background-color: #454545;
+}
+.collapse1{
+    background: #575757 url(../img/menu_1.png) 9px 0 no-repeat;
+}
+.collapse2{
+    background: #575757 url(../img/menu_2.png) 9px 0 no-repeat;
+}
+.collapse3{
+    background: #575757 url(../img/menu_3.png) 9px 0 no-repeat;
+}
+.collapse4{
+    background: #575757 url(../img/menu_4.png) 9px 0 no-repeat;
+}
+.collapse5{
+    background: #575757 url(../img/menu_5.png) 9px 0 no-repeat;
+}
+.collapse6{
+    background: #575757 url(../img/menu_6.png) 9px 0 no-repeat;
+}
+.collapse7{
+    background: #575757 url(../img/menu_7.png) 9px 0 no-repeat;
+}
+.collapse8{
+    background: #575757 url(../img/menu_8.png) 9px 0 no-repeat;
+}
+.collapse9{
+    background: #575757 url(../img/menu_9.png) 9px 0 no-repeat;
+}
+.collapse10{
+    background: #575757 url(../img/menu_10.png) 9px 0 no-repeat;
+}
+.collapse11{
+    background: #575757 url(../img/menu_11.png) 9px 0 no-repeat;
+}
+.collapse12{
+    background: #575757 url(../img/menu_12.png) 9px 0 no-repeat;
+}
+.collapse13{
+    background: #575757 url(../img/menu_13.png) 9px 0 no-repeat;
+}
+.collapse14{
+    background: #575757 url(../img/menu_14.png) 9px 0 no-repeat;
+}
+.collapse15{
+    background: #575757 url(../img/menu_15.png) 9px 0 no-repeat;
+}
+.collapse16{
+    background: #575757 url(../img/menu_16.png) 9px 0 no-repeat;
+}
