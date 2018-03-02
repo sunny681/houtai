@@ -43,6 +43,8 @@
 						<i class="iconfont icon-2yanzhengma"></i>
 						<input type="text" name="username" placeholder="验证码" class="yzm">
 						<div class="Yanz">
+							<span class="yanzheng" style="width:104px;height: 36px;display: inline-block;"></span>
+
 							<!-- 789 -->
 						</div>
 						<!-- <span class="s2">画荻和丸i</span> -->
@@ -70,26 +72,55 @@
 		
 
 	</body>
+	<script type="text/javascript" src="../js/public.js"></script>
 	<script type="text/javascript">
-		function login() {
-			$.ajax({
-				url: "/api/login",
-				type: "post",
-				data: {
-					username: $("#username").val(),
-					psw: $("#psw").val()
+		// 验证码
+		$(".Yanz").blur(function(){
+			var showYzm = $(".Yanz").val();
+			var showPic = $(".yanzheng").html();
+			if(showYzm!=showPic){
+				flagYzm=false;
+				$(".s2").html("图片验证码不正确");
+
+				$(this).parent().parent().css("border-color","red")
+				
+				
+			}else if(showYzm==showPic){
+				flagYzm=true;
+				$(".s2").html("");
+				$(this).parent().parent().css("border-color","#D9D9D9")
+			}
+			console.log("flagPwd","flagPwd");
+		})
+
+//获取验证码
+$(".yanzheng").html(getColor(4));
+$(".yanzheng").click(function(){
+	$(this).html(getColor(4))
+})
+
+</script>
+<script type="text/javascript">
+
+	function login() {
+		$.ajax({
+			url: "/api/login",
+			type: "post",
+			data: {
+				username: $("#username").val(),
+				psw: $("#psw").val()
+				
+			},
+			success: function(res) {
+				console.log(res);
+				if( res.status == 1 ){
+					location.href = "/index"
 					
-				},
-				success: function(res) {
-					console.log(res);
-					if( res.status == 1 ){
-						location.href = "/index"
-						
-					}else{
-						alert("登录失败")
-					}
+				}else{
+					alert("登录失败")
 				}
-			})
-		}
-	</script>
-	</html>
+			}
+		})
+	}
+</script>
+</html>

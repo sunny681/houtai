@@ -1,52 +1,52 @@
 .top-one{
-      padding-left: 10px;
-    height: 34px;
-    padding-top: 0px;
-    background: #303030;
+  padding-left: 10px;
+  height: 34px;
+  padding-top: 0px;
+  background: #303030;
 }
 .top-one p{
     margin: 1px 0 0 0;
 }
 .top-one p span{
-      line-height: 33px;
-    font-weight: bold;
-    padding: 4px 15px 4px 18px;
-    cursor: hand;
-    cursor: pointer;
-    font-size: 14px;
-    color: #fff;
+  line-height: 33px;
+  font-weight: bold;
+  padding: 4px 15px 4px 18px;
+  cursor: hand;
+  cursor: pointer;
+  font-size: 14px;
+  color: #fff;
 }
 /*show*/
 .show li{
-      cursor: pointer;
-        display: block;
-    border-top: #7f7f7f 1px solid;
-    width: 100%;
-    color: #FFF;
-    line-height: 42px;
-    text-align: left;
-    text-indent: 40px;
-    font-size: 12px;
+  cursor: pointer;
+  display: block;
+  border-top: #7f7f7f 1px solid;
+  width: 100%;
+  color: #FFF;
+  line-height: 42px;
+  text-align: left;
+  text-indent: 40px;
+  font-size: 12px;
 
 }
 .menu-item{
-      cursor: pointer;
-      font-size: 12px;
-    height: 30px;
-    line-height: 30px;
-    display: block;
-    font-weight: normal;
-    background: none;
+  cursor: pointer;
+  font-size: 12px;
+  height: 30px;
+  line-height: 30px;
+  display: block;
+  font-weight: normal;
+  background: none;
 }
 .menu-item a{
-        font-size: 12px;
+    font-size: 12px;
     height: 30px;
     line-height: 30px;
     display: block;
     color: #d7d7d7;
 }
 .menu-item a:hover{
-        background-color: #797979;
+    background-color: #797979;
     text-decoration: none;
     color: #fff;
 }

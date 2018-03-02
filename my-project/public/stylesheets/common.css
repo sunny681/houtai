@@ -9,22 +9,22 @@ input{outline:none;}
 img{display:block;border:0;}
 .clearfix:after{content:".";clear:both;display:block;height:0;overflow: hidden;visibility: hidden;}
 .clearfix{zoom:1;}
- /*移动端    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />*/
+/*移动端    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />*/
 after {
-    content: '';
-   
-	 display: block;
-    
+	content: '';
+	
+	display: block;
+	
 	position: absolute;
-    
+	
 	width: 100%;
-    left: 0;
-    bottom: 0;
-    height: 1px;
-    background-color: #c8c7cc;
-   
-	 -webkit-transform: scaleY(0.5);
-    
+	left: 0;
+	bottom: 0;
+	height: 1px;
+	background-color: #c8c7cc;
+	
+	-webkit-transform: scaleY(0.5);
+	
 	transform: scaleY(0.5);
 }
 !important;

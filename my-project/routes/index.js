@@ -42,20 +42,20 @@ router.get('/add', function(req, res, next) {
 		GoodsModel.remove( { goods_name : req.body.goods_name },function(err,docs){
 			res.send(docs)
 		})
-})
+	})
 	// 搜索
 	router.post("/api/ss",function(req,res){
 		GoodsModel.find( { goods_name :{$regex: req.body.goods_name} },function(err,docs){
 			res.send(docs)
 		})
-})
+	})
 
 // 商品列表
-	router.get('/goods', function(req, res){
-		GoodsModel.find({}, function(err, docs) {
-			res.render("goods", {list: docs});
-		})
+router.get('/goods', function(req, res){
+	GoodsModel.find({}, function(err, docs) {
+		res.render("goods", {list: docs});
 	})
+})
 // 添加
 router.post("/api/add", function(req, res){
 	var Form = new multiparty.Form({

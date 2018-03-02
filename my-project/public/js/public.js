@@ -40,7 +40,7 @@ function toTwo(val){
 
 //将一个字符串转成日期
 function stringToDate(str){
-    return  new Date(str);
+	return  new Date(str);
 }
 //时间差
 function diff(start,end){
