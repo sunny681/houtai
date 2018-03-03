@@ -10,5 +10,6 @@ var User = new Schema({
 
 // 创建model对象，与数据库中的文档（表）映射
 var UserModel = mongoose.model('user', User);
+
 // commonJS规范(暴露接口)
 module.exports = UserModel;

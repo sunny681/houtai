@@ -64,6 +64,7 @@ router.get('/add', function(req, res, next) {
 		res.render("goods", {list: docs});
 	})*/
 	router.get('/goods', function(req, res,next){
+		var pages = req.query.pages;
 		var pageNo = parseInt(req.query.pageNo || 1);
 		var count  = parseInt( req.query.count || 5);
 		// .skip()--略过多少条
@@ -118,6 +119,7 @@ router.post("/api/login",function(req,res){
 // console.log(req);
 var username = req.body.username;
 var psw = req.body.psw;
+//console.log(username, psw);  --查看一下,是否能找到username,和psw
 var result = {
 	status :1,
 	message:"登录成功"
@@ -125,7 +127,7 @@ var result = {
 // console.log(UserModel.find);
 UserModel.find({username:username,psw:psw},function(err,docs){
 		// console.log(2);
-		if(!err){
+		if(!err && docs.length>0){
 			// 生成session
 			req.session.username = username;
 			console.log("登录成功");
