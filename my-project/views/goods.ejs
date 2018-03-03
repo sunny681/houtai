@@ -177,23 +177,30 @@
 								<td align="right" nowrap="true" style="background-color: rgb(255, 255, 255);">
 									<!-- $Id: page.htm 14216 2008-03-10 02:27:21Z testyang $ -->
 									<div id="turn-page">总计 
-										<span id="totalRecords">36</span>
+										<span id="totalRecords"><%=parseInt(list.length/pageNo)*list.length%></span>
 										个记录分为 
-										<span id="totalPages">3</span>
+										<span id="totalPages"><%=parseInt(list.length/pageNo)%></span>
+
 										页当前第 
-										<span id="pageCurrent">1</span>
-										页，每页 
-										<input type="text" size="3" id="pageSize" value="15">
+										<span id="pageCurrent"><%=pageNo%></span>
+										页
+										每页 
+										<span id="totalRecords"><%=list.length%></span>
+										个记录
 										<span id="page-link">
-											<a href="javascript:;">第一页</a>
-											<a href="javascript:;">上一页</a>
-											<a href="javascript:;">下一页</a>
-											<a href="javascript:;">最末页</a>
-											<select id="gotoPage">
+										
+											<!-- <a href="#">第一页</a> -->
+										
+											<%if(pageNo>1)  {%>
+											<a href="/goods?pageNo=<%=pageNo-1 %>&count=<%=count %>">上一页</a>
+											<%}%>
+											<a href="/goods?pageNo=<%=pageNo+1 %>&count=<%=count %>">下一页</a>
+											<!-- <a href="javascript:;">最末页</a> -->
+										<!-- 	<select id="gotoPage">
 												<option value="1">1</option>
 												<option value="2">2</option>
 												<option value="3">3</option>         
-											</select>
+											</select> -->
 										</span>
 									</div>
 								</td>

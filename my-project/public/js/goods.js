@@ -1,7 +1,7 @@
 window.onload = function(){
 // 搜索
 $(".button").click(function(){
-    // e.stopPropagation();
+    // e.stopPropagation(); 
     console.log($(".txt").val())
     $.ajax({
             url:"/api/ss", //后台提供的查找接口
@@ -112,6 +112,10 @@ $(".button").click(function(){
             }
           });
 })
+// 分页
+function page(){
+  var a = $("#totalRecords").val()//总计多少个的
+}
 
 
 

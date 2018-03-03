@@ -3,7 +3,11 @@ var router = express.Router();
 var md5 = require("md5");
 var UserModel = require("../model/usermodel");
 var multiparty = require('multiparty');
-var GoodsModel = require("../model/GoodsModel");
+var GoodsModel = require("../model/GoodsModel.js");
+
+
+
+
 
 
 /* GET home page. */
@@ -45,17 +49,38 @@ router.get('/add', function(req, res, next) {
 	})
 	// 搜索
 	router.post("/api/ss",function(req,res){
+
 		GoodsModel.find( { goods_name :{$regex: req.body.goods_name} },function(err,docs){
 			res.send(docs)
+
+			// 
+
 		})
 	})
 
 // 商品列表
-router.get('/goods', function(req, res){
+/*router.get('/goods', function(req, res){
 	GoodsModel.find({}, function(err, docs) {
 		res.render("goods", {list: docs});
-	})
+	})*/
+	router.get('/goods', function(req, res,next){
+		var pageNo = parseInt(req.query.pageNo || 1);
+		var count  = parseInt( req.query.count || 5);
+		// .skip()--略过多少条
+		var query = GoodsModel.find({}).skip((pageNo-1)*count).limit(count).sort({date:-1});
+		query.exec(function(err,results){
+			console.log(err)//看看有没有err是否出错
+			res.render('goods',{list:results,pageNo:pageNo,count:count});
+		})
+/*	GoodsModel.find({}, function(err, results) {
+		res.render("goods", {list: results});
+	})*/
 })
+
+// 分页
+
+
+
 // 添加
 router.post("/api/add", function(req, res){
 	var Form = new multiparty.Form({
@@ -100,7 +125,7 @@ var result = {
 // console.log(UserModel.find);
 UserModel.find({username:username,psw:psw},function(err,docs){
 		// console.log(2);
-		if(!err&&docs.length>0){
+		if(!err){
 			// 生成session
 			req.session.username = username;
 			console.log("登录成功");
